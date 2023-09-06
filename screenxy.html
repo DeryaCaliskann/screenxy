@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>ScreenXY</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .mousealani {
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 500px;
+            border: 1px solid black;
+        }
+
+        .sonucalani {
+            background-color: #f1f1f1;
+            margin: 0;
+            margin-top: 5px;
+            padding: 5px;
+            width: 100%;
+            border: 1px solid black;
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mousealani" onmousemove="ornek()">Mause'u bu alanda gezdiriniz</div>
+    <div class="sonucalani"> Mouse'un Koordinatı:(X)<span id="xdegeri"></span>(Y)<span id="ydegeri"></span></div>
+
+    <script type="text/javascript" Language="javascript">
+        function ornek() {
+            var xdegerinibul = event.screenX;
+            var ydegerinibul = event.screenY;
+            document.getElementById("xdegeri").innerHTML = xdegerinibul;
+            document.getElementById("ydegeri").innerHTML = ydegerinibul;
+        }
+
+    </script>
+
+</body>
+
+</html>
